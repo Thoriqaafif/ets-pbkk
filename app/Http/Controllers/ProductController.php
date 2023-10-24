@@ -46,6 +46,7 @@ class ProductController extends Controller
         $product->kecacatan = $request->kecacatan;
         $product->jumlah = $request->jumlah;        
         $product->foto = $request->foto;
+        $product->save();
         return Redirect::view('success');
     }
 

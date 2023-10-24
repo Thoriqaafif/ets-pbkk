@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/product/add', [ProductController::class, 'add'])->name('product.add');   
-    Route::get('/product/new', [ProductController::class, 'new'])->name('product.new');   
+    Route::post('/product/new', [ProductController::class, 'new'])->name('product.new');   
 
     Route::get('/product', [ProductController::class, 'show'])->name('product.show'); 
     Route::get('/product/{id}', [ProductController::class, 'edit'])->name('product.edit');
